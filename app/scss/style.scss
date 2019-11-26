@@ -174,8 +174,22 @@ input{
   background: url('../img/background-main.jpg') no-repeat fixed center center;
   background-size: cover;
   @media screen and (max-width: 991px) {
-    background: url('../img/background-main.jpg') no-repeat fixed center center;
+    background: none;
+    //background: url('../img/background-main.jpg') no-repeat scroll center center;
+    //background-size: cover;
+  }
+}
+.background{
+  @media screen and (max-width: 991px) {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background: url('../img/background-main.jpg') no-repeat center center;
     background-size: cover;
+    opacity: 1;
+    z-index: -1;
   }
 }
 .main-section__block{
@@ -524,6 +538,10 @@ input{
 /*alfa-romeo page*/
 .name-car__block{
   padding:20px 0;
+  @media screen and (max-width: 480px) {
+    padding:0;
+    padding-top:10px;
+  }
 }
 .name-car__title{
   font-size:21px;
@@ -536,12 +554,16 @@ input{
   display:flex;
   margin:10px 0;
   justify-content: space-between;
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 }
 .name-car__image-block{
 
   display:flex;
   max-height:416px;
 }
+
 .name-car__img_graph{
   object-fit: contain;
 }
@@ -553,12 +575,21 @@ input{
   flex-direction: column;
   justify-content: flex-start; // поменять на space-between для растягивания
   margin-right:20px;
+  @media screen and (max-width: 480px) {
+    align-items:center;
+    margin-right:0;
+    margin-bottom:10px;
+  }
 }
 .name-car__video{
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
+    width:100%;
+  @media screen and (max-width: 480px) {
+    max-width:100%;
+  }
   iframe {
     position: absolute;
     top: 0;
@@ -601,6 +632,14 @@ input{
 }
 .name-car__image{
   max-width:100%;
+  text-align: center;
+  max-height: 400px;
+  overflow: hidden;
+  img{
+    min-height: 100%;
+    max-height:400px;
+    object-fit: cover;
+  }
 }
 
 /*mobile-menu*/
