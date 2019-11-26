@@ -261,7 +261,6 @@ $(function() {
   var menu = document.querySelector(".mobile-menu");
   var burger_btn = document.querySelector(".burger-menu");
     var overlay = document.querySelector('.wrapper-black');
-
   burger_btn.addEventListener("click", function() {
     menu.classList.add("close");
       overlay.style.display = 'block';
@@ -275,6 +274,7 @@ $(function() {
         !evt.target.closest('.mobile-menu') ||
         evt.target.closest('.close-menu__button')
     ) {
+      evt.preventDefault();
       menu.classList.remove("close");
         overlay.style.display = 'none';
     }

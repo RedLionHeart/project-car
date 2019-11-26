@@ -18,13 +18,13 @@ try {
     $mail->Port = 25;
     // Настройки вашей почты
     $mail->Host       = 'localhost'; // SMTP сервера GMAIL
-    $mail->Username   = 'email'; // Логин на почте
-    $mail->Password   = 'password'; // Пароль на почте
+    $mail->Username   = 'digital.transporting'; // Логин на почте
+    $mail->Password   = '1701202dgmp'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('email@gmail.com', 'NAME'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('digital.transporting@gmail.com', 'NAME'); // Адрес самой почты и имя отправителя
     // Получатель письма
-    $mail->addAddress('email@gmail.com');
+    $mail->addAddress('digital.transporting@gmail.com');
 
         // -----------------------
         // Само письмо
